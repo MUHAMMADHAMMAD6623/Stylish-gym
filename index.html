@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit our gym please">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Gym-Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+
+        html {
+            height: 1000px;
+        }
+
+        body {
+            height: 1000px;
+        }
+
+        .navbar {
+            background-color: rgb(1, 1, 15);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        .navbar .left {
+            color: rgb(46, 46, 114);
+            font-size: 2rem;
+        }
+
+        .navbar .left:hover {
+            cursor: pointer;
+        }
+
+        .navbar .right ul {
+            display: flex;
+        }
+
+        .navbar .right ul li {
+            margin: 23px 28px;
+        }
+
+        .navbar .right ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .navbar .right ul li a:hover {
+            color: rgb(58, 58, 139);
+        }
+
+        .bg {
+            width: 100%;
+            height: 900px;
+        }
+
+        .main {
+            text-align: center;
+            position: relative;
+            top: -620px;
+            left: 200px;
+            width: 900px;
+            color: white;
+            line-height: 50px;
+        }
+
+        .main h1 {
+            font-size: 3rem;
+        }
+
+        .main h3 {
+            font-size: 2.6rem;
+        }
+
+        .main .fst {
+            color: black;
+            height: 50px;
+            font-size: 1.3rem;
+        }
+
+        .main .sec {
+            color: black;
+            font-size: 1.3rem;
+            position: relative;
+            top: 10px;
+        }
+
+        .main .thrd {
+            color: black;
+            font-size: 1.3rem;
+            position: relative;
+            top: -70px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6d6d6d;
+            border-radius: 6px;
+            height: 200px;
+        }
+
+        .layout {
+            display: grid;
+            margin: 1rem;
+            height: 1040px;
+        }
+
+        .box {
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #box-1 {
+            color: white;
+            background: #111111;
+            width: 600px;
+            height: 250px;
+            padding: 7px;
+            position: relative;
+            top: -100px;
+        }
+
+        #box-1 p {
+            color: gray;
+        }
+
+        #box-2 {
+            background: rgb(68, 6, 150);
+            padding: 14px;
+            width: 270px;
+            position: relative;
+            left: 632px;
+            top: -365px
+        }
+
+        #box-2 p {
+            color: gray;
+        }
+
+        #box-3 {
+            background: rgb(224, 224, 224);
+            width: 270px;
+            height: 490px;
+            padding: 7px;
+            position: relative;
+            left: 950px;
+            top: -628px;
+        }
+
+        #box-3 p {
+            color: rgb(97, 97, 97);
+        }
+
+        #box-4 {
+            background: rgb(97, 97, 97);
+            width: 270px;
+            padding: 7px;
+            position: relative;
+            bottom: 852px;
+            color: white;
+        }
+
+        #box-4 p {
+            color: rgb(173, 173, 173);
+        }
+
+        #box-5 {
+            background: rgb(224, 224, 224);
+            width: 600px;
+            padding: 7px 15px;
+            position: relative;
+            left: 300px;
+            bottom: 1075px;
+        }
+
+        .contact {
+            position: relative;
+            bottom:500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact input {
+            margin: 6px;
+        }
+
+        .contact input[type="text"],
+        .contact input[type="number"] {
+            width: 400px;
+            height: 40px;
+            font-size: 1.4rem;
+            padding-left: 8px;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 7px;
+        }
+        .contact button{
+            padding: 4px;
+            background-image: linear-gradient(65deg,blue,red);
+            border: 2px solid black;
+            font-size: 1.3rem;
+            border-radius: 7px;
+            margin-top: 10px;
+            font-weight: 500;
+            color: white;
+        }
+        .contact button:hover{
+            cursor: pointer;
+        }
+        #select{
+            background: #000;
+            border: none;
+            border-radius: 7px;
+            color: white;
+            padding: 4px;
+            font-size: 1.1rem;
+        }
+        footer{
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+            position: relative;
+            top: -360px;
+        }
+        footer p{
+            color: white;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left">Gym</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <img src="bgofgymweb.jpg" class="bg">
+    <div class="main">
+        <h1>Welcome!</h1>
+        <h3>To my gym website</h3>
+        <h4 class="fst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium id ipsam, porro,</h4>
+        <h4 class="sec">similique quasi</h4>
+        <h4 class="thrd">praesentium error a consequuntur quod perferendis adipisci eligendi excepturi nemo!</h4>
+    </div>
+    <div class="layout">
+        <div id="box-1" class="box">
+            <h2>Los angeles branch</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quam aliquam fugit delectus libero
+                expedita adipisci unde! Culpa, possimus rerum incidunt doloribus soluta sit magnam pariatur ipsam
+                consequatur tempora minima aliquam enim odit alias quidem cum nostrum, architecto veniam! Veniam nam quo
+                error repellendus, tenetur excepturi cupiditate aliquid provident velit! Unde explicabo eligendi
+                recusandae incidunt doloremque, dolore ad officiis aliquam fugit et. Libero assumenda minus at eligendi
+                temporibus? Nam, dolore.</p>
+        </div>
+        <div id="box-2" class="box">
+            <h2>California branch</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est dicta in architecto doloremque iure dolor
+                consectetur obcaecati nesciunt, esse totam quae quo nemo odit eveniet, blanditiis dolores atque officia?
+                Magnam, accusantium doloremque.</p>
+        </div>
+        <div id="box-3" class="box">
+            <h2>New york branch</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, molestiae? Cumque, dolores ullam! Dolore
+                laborum fugiat harum! Delectus, amet nostrum. Doloremque magnam ipsa, cumque rerum facilis aliquam
+                tenetur earum officia ad neque? Ea explicabo sapiente, corporis aut ut natus nulla animi. Ipsa
+                temporibus architecto minima consequuntur id! Optio enim in suscipit cupiditate, laboriosam iusto
+                aliquam! Tempore architecto nihil repellat harum nesciunt dolorem possimus labore sed. Cupiditate
+                dolorem nihil qui libero.</p>
+        </div>
+        <div id="box-4" class="box">
+            <h2>Miami branch</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic minima ipsam pariatur perspiciatis beatae
+                dicta voluptatibus saepe? Unde cum, assumenda atque tempore error ab?
+            </p>
+        </div>
+        <div id="box-5" class="box">
+            <h2>Washington branch</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolorum atque libero rerum perferendis
+                consequatur consequuntur velit est, aliquam, asperiores fuga cum laborum accusamus a corporis culpa, sed
+                quis? Officiis dolor quaerat voluptas quibusdam. Deserunt accusantium, vitae fugit cumque amet nulla
+                quam libero tempore totam exercitationem! Quibusdam, cum hic incidunt eveniet at rerum praesentium amet
+                excepturi voluptatibus tenetur delectus similique?</p>
+        </div>
+    </div>
+    <div class="contact">
+        <h2>Apply for gym</h2>
+        <input type="text" placeholder="Enter your name here">
+        <input type="number" placeholder="Enter your age here">
+        <select id="select">
+            <option>washington</option>
+            <option>new york</option>
+            <option>los angeles</option>
+            <option>miami</option>
+            <option>california</option>
+        </select>
+        <label for="Male">
+            Male:<input type="radio" id="Male">
+        </label>
+        <label for="Female">
+            Female:<input type="radio" id="Female">
+        </label>
+        <button>Apply</button>
+    </div>
+    <footer>
+        <p>Copyright M.hammad 2023 ltd</p>
+    </footer>
+</body>
+
+</html>
